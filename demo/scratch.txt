@@ -1,0 +1,9 @@
+beam-cli deploy:
+/home/ifm/prj/BEAM/beam-framework/beam/bin/beam-cli
+--force-confirmations on BEAM-PoC-Backend @ develop run deploy master
+working dir: product
+
+beam-cli service:
+/home/ifm/prj/BEAM/beam-framework/beam/bin/beam-cli
+--force-confirmations on BEAM-PoC-Backend @ develop run service restart *
+working dir: product

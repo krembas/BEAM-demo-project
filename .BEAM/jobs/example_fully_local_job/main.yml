@@ -1,0 +1,15 @@
+---
+#------------------------------------------------------------------------------#
+#    *** This haiku play is required as first play in any job playbook ***
+# It validates job args, initializes playbook as apropriate "job" and provides
+# required vars from BEAM, available as BEAM_VARS in whole playbook (and also
+# all plays/roles it includes, which may require them to run properly)
+#==============================================================================#
+- { hosts: "localhost:all" ,vars: {job_path: ".."} ,gather_facts: no ,roles: [beam-job-init] }
+#==============================================================================#
+
+# put job plays/includes here below:
+- hosts: localhost
+  tasks:
+    - name: Just an example of fully local job
+      debug: "var=BEAM_VARS"

@@ -1,0 +1,2 @@
+---
+BEAM_VARS: "{{ {} | combine(__RAW_BEAM_VARS) }}"

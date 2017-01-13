@@ -1,0 +1,8 @@
+# instances that belong to project BEAM-PoC-Backend
+[BEAM-PoC-Backend]
+postgres_db         ansible_host=192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/prj/BEAM/beam-poc-product/demo/vagrant-instances/develop/all-in-one-instance/.vagrant/machines/default/virtualbox/private_key ansible_ssh_common_args=-oStrictHostKeyChecking=no
+django_backend      ansible_host=192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/prj/BEAM/beam-poc-product/demo/vagrant-instances/develop/all-in-one-instance/.vagrant/machines/default/virtualbox/private_key ansible_ssh_common_args=-oStrictHostKeyChecking=no
+
+# instances that belong to project BEAM-PoC-Frontend
+[BEAM-PoC-Frontend]
+angular_frontend     ansible_host=192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/prj/BEAM/beam-poc-product/demo/vagrant-instances/develop/all-in-one-instance/.vagrant/machines/default/virtualbox/private_key ansible_ssh_common_args=-oStrictHostKeyChecking=no

@@ -1,0 +1,24 @@
+#
+# product-related part of deploy job
+#
+---
+#------------------------------------------------------------------------------#
+#    *** This haiku play is required as first play in any job playbook ***
+# It validates job args, initializes playbook as apropriate "job" and provides
+# required vars from BEAM, available as BEAM_VARS in whole playbook (and also
+# all plays/roles it includes, which may require them to run properly)
+#==============================================================================#
+- { hosts: "localhost:all" ,gather_facts: no ,roles: [beam-job-init] }
+#==============================================================================#
+
+- hosts: localhost
+  connection: local
+  vars:
+    job_roles_dir: "../../roles"  # just a shortcut to avoid "ugly dots and slashes" in role names ;)
+  roles:
+    - { role: "{{job_roles_dir}}/product-common", action: deploy }
+
+- hosts: all
+  serial: 1
+  roles:
+    - { role: beam.instance-common, action: deploy }
