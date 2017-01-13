@@ -3,13 +3,13 @@
 #
 ---
 - name: Preparing and starting all vagrant instances for develop environment
-  command: vagrant up chdir="~/prj/BEAM/{{ BEAM_VARS.PRODUCT.REPO_NAME }}/demo/vagrant-instances/develop/{{ item }}"
+  command: vagrant up chdir="~/BEAM-Demo/{{ BEAM_VARS.PRODUCT.REPO_NAME }}/demo/vagrant-instances/develop/{{ item }}"
   with_items:
     - all-in-one-instance
   when: BEAM_VARS.PRODUCT.ENVIRONMENT=="develop"
 
 - name: Preparing and starting all vagrant instances for production environment
-  command: vagrant up chdir="~/prj/BEAM/{{ BEAM_VARS.PRODUCT.REPO_NAME }}/demo/vagrant-instances/production/{{ item }}"
+  command: vagrant up chdir="~/BEAM-Demo/{{ BEAM_VARS.PRODUCT.REPO_NAME }}/demo/vagrant-instances/production/{{ item }}"
   with_items:
     - db
     - backend
