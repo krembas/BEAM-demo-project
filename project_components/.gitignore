@@ -1,0 +1,4 @@
+# Ignore everything in this directory except this file. This directory is a space for project components cloned as separate repos.
+*
+*/
+!.gitignore

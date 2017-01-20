@@ -1,0 +1,17 @@
+#
+# Common tasks for project deployment
+#
+---
+- name: Preparing and starting all vagrant instances for develop environment
+  command: vagrant up chdir="~/BEAM-Demo/{{ BEAM_VARS.PROJECT.REPO_NAME }}/demo/vagrant-instances/develop/{{ item }}"
+  with_items:
+    - all-in-one-instance
+  when: BEAM_VARS.PROJECT.ENVIRONMENT=="develop"
+
+- name: Preparing and starting all vagrant instances for production environment
+  command: vagrant up chdir="~/BEAM-Demo/{{ BEAM_VARS.PROJECT.REPO_NAME }}/demo/vagrant-instances/production/{{ item }}"
+  with_items:
+    - db
+    - backend
+    - frontend
+  when: BEAM_VARS.PROJECT.ENVIRONMENT=="production"

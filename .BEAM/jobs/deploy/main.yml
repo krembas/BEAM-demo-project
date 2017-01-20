@@ -1,5 +1,5 @@
 #
-# product-related part of deploy job
+# project-related part of deploy job
 #
 ---
 #------------------------------------------------------------------------------#
@@ -16,7 +16,7 @@
   vars:
     job_roles_dir: "../../roles"  # just a shortcut to avoid "ugly dots and slashes" in role names ;)
   roles:
-    - { role: "{{job_roles_dir}}/product-common", action: deploy }
+    - { role: "{{job_roles_dir}}/project-common", action: deploy }
 
 - hosts: all
   serial: 1

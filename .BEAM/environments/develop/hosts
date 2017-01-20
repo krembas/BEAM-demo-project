@@ -1,8 +1,8 @@
-# instances that belong to project BEAM-DEMO-Product-Backend
-[BEAM-DEMO-Product-Backend]
+# instances that belong to project BEAM-Demo-Backend
+[BEAM-Demo-Backend]
 postgres_db         ansible_host=192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/BEAM-Demo/BEAM-demo-product/demo/vagrant-instances/develop/all-in-one-instance/.vagrant/machines/default/virtualbox/private_key ansible_ssh_common_args=-oStrictHostKeyChecking=no
 django_backend      ansible_host=192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/BEAM-Demo/BEAM-demo-product/demo/vagrant-instances/develop/all-in-one-instance/.vagrant/machines/default/virtualbox/private_key ansible_ssh_common_args=-oStrictHostKeyChecking=no
 
-# instances that belong to project BEAM-DEMO-Product-Frontend
-[BEAM-DEMO-Product-Frontend]
+# instances that belong to project BEAM-Demo-Frontend
+[BEAM-Demo-Frontend]
 angular_frontend     ansible_host=192.168.33.10 ansible_user=vagrant ansible_ssh_private_key_file=~/BEAM-Demo/BEAM-demo-product/demo/vagrant-instances/develop/all-in-one-instance/.vagrant/machines/default/virtualbox/private_key ansible_ssh_common_args=-oStrictHostKeyChecking=no
